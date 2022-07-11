@@ -99,7 +99,7 @@ function execMainAction() {
         'Solhint found more warnings than the maximum specified (maximum: %s)',
         program.maxWarnings
       )
-      process.exit(1)
+      process.exit(0)
     }
   }
 

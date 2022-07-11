@@ -1,6 +1,6 @@
 {
   "name": "solhint-nvim",
-  "version": "3.3.8",
+  "version": "3.3.9",
   "description": "Solidity Code Linter",
   "main": "lib/index.js",
   "keywords": [
@@ -14,7 +14,7 @@
     "smart-contracts"
   ],
   "homepage": "https://protofire.github.io/solhint/",
-  "repository": "https://github.com/beauwilliams/solhint",
+  "repository": "https://github.com/protofire/solhint",
   "scripts": {
     "exec-tests": "nyc mocha --recursive && nyc report --reporter=text-lcov | coveralls",
     "test:coverage": "npm run exec-tests",
