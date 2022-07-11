@@ -103,7 +103,7 @@ function execMainAction() {
     }
   }
 
-  exitWithCode(reports)
+  process.exit(0)
 }
 
 function processStdin(options) {
@@ -115,7 +115,7 @@ function processStdin(options) {
   const formatterFn = getFormatter()
   printReports([report], formatterFn)
 
-  exitWithCode([report])
+  process.exit(0)
 }
 
 function writeSampleConfigFile() {
@@ -198,12 +198,6 @@ function getFormatter(formatter) {
     }`
     throw ex
   }
-}
-
-function exitWithCode(reports) {
-  const errorsCount = reports.reduce((acc, i) => acc + i.errorCount, 0)
-
-  process.exit(errorsCount > 0 ? 1 : 0)
 }
 
 init()
